@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package coworkify.Usuario.Vista;
+package proyectob;
 
 /**
  *
@@ -34,16 +34,27 @@ public class inicio_sesion extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         ingresarcuenta = new javax.swing.JTextField();
         ingresarcontraseña = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(null);
 
+        jPanel1.setName(""); // NOI18N
         jPanel1.setLayout(null);
 
+        jButton1.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jButton1.setText("INICIAR SESION");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
-        jButton1.setBounds(210, 270, 140, 40);
+        jButton1.setBounds(170, 270, 170, 40);
 
+        jButton2.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
         jButton2.setText("CREAR UNA CUENTA");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,17 +62,17 @@ public class inicio_sesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(190, 330, 180, 20);
+        jButton2.setBounds(160, 360, 190, 30);
 
-        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel2.setText("INGRESAR CUENTA");
+        jLabel2.setFont(new java.awt.Font("Algerian", 3, 36)); // NOI18N
+        jLabel2.setText("COWORKIFY");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(160, 60, 230, 40);
+        jLabel2.setBounds(160, 20, 230, 40);
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 16)); // NOI18N
         jLabel3.setText("INGRESAR CONTRASEÑA");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(160, 150, 310, 40);
+        jLabel3.setBounds(140, 160, 240, 40);
 
         ingresarcuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,7 +80,7 @@ public class inicio_sesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ingresarcuenta);
-        ingresarcuenta.setBounds(160, 100, 230, 40);
+        ingresarcuenta.setBounds(140, 110, 230, 40);
 
         ingresarcontraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,16 +88,33 @@ public class inicio_sesion extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ingresarcontraseña);
-        ingresarcontraseña.setBounds(160, 200, 230, 40);
+        ingresarcontraseña.setBounds(140, 210, 230, 40);
+
+        jLabel1.setText("¿No tienes una cuenta?");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(190, 330, 140, 14);
+
+        jLabel4.setFont(new java.awt.Font("Arial Black", 1, 16)); // NOI18N
+        jLabel4.setText("INGRESAR CUENTA");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(140, 70, 230, 40);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 560, 410);
+        jPanel1.setBounds(0, 0, 560, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+     //    TODO add your handling code here:
+                    this.setVisible(false);
+              crear_cuenta forma = new crear_cuenta(){};
+              forma.setVisible(true);
+                 forma.setBounds(375,210, 561, 465);
+                 forma.setTitle("CREAR CUENTA");
+                 
+ 
+  
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void ingresarcuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarcuentaActionPerformed
@@ -97,6 +125,19 @@ public class inicio_sesion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ingresarcontraseñaActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+                 this.setVisible(false);
+  selec_areatrab forma = new  selec_areatrab();
+                 forma.setVisible(true);
+                 forma.setBounds(375,210, 365, 310);
+                 forma.setTitle("ÁREA DE TRABAJO");
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -106,8 +147,10 @@ public class inicio_sesion extends javax.swing.JFrame {
     private javax.swing.JTextField ingresarcuenta;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
