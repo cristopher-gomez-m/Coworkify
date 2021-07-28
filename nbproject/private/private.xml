@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Vista/crear_cuenta.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Vista/PROYECTOB.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Vista/ingre_areatrab.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Vista/inicio_sesion.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Modelo/Usuario.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Modelo/UsuarioDB.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Vista/selec_areatrab.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Vista/crear_areatrab.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Controlador/UsuarioLogin.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Coworkify.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Vista/menu_princ.java</file>
+        </group>
     </open-files>
 </project-private>
