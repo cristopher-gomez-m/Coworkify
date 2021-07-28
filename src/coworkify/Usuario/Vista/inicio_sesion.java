@@ -5,12 +5,31 @@
  */
 package coworkify.Usuario.Vista;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Dani Beva
  */
 public class inicio_sesion extends javax.swing.JFrame {
 
+    public JButton getIniciar_sesion() {
+        return iniciar_sesion;
+    }
+
+    public JTextField getIngresarcontraseña() {
+        return ingresarcontraseña;
+    }
+
+    public JTextField getIngresarcuenta() {
+        return ingresarcuenta;
+    }
+
+    
+    
+    
+    
     /**
      * Creates new form inicio_sesion
      */
@@ -28,7 +47,7 @@ public class inicio_sesion extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        iniciar_sesion = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -44,15 +63,15 @@ public class inicio_sesion extends javax.swing.JFrame {
         jPanel1.setName(""); // NOI18N
         jPanel1.setLayout(null);
 
-        jButton1.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jButton1.setText("INICIAR SESION");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        iniciar_sesion.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        iniciar_sesion.setText("INICIAR SESION");
+        iniciar_sesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                iniciar_sesionActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(170, 270, 170, 40);
+        jPanel1.add(iniciar_sesion);
+        iniciar_sesion.setBounds(170, 270, 170, 40);
 
         jButton2.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
         jButton2.setText("CREAR UNA CUENTA");
@@ -125,18 +144,14 @@ public class inicio_sesion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ingresarcontraseñaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void iniciar_sesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciar_sesionActionPerformed
         // TODO add your handling code here:
                  this.setVisible(false);
   selec_areatrab forma = new  selec_areatrab();
                  forma.setVisible(true);
                  forma.setBounds(375,210, 365, 310);
                  forma.setTitle("ÁREA DE TRABAJO");
-        
-        
-        
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_iniciar_sesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,7 +160,7 @@ public class inicio_sesion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ingresarcontraseña;
     private javax.swing.JTextField ingresarcuenta;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton iniciar_sesion;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

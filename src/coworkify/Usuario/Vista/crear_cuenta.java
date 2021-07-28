@@ -19,6 +19,34 @@ import javax.swing.event.ChangeListener;
  * @author Dani Beva
  */
 public abstract class crear_cuenta extends javax.swing.JFrame {
+
+    public JTextField getApellido() {
+        return apellido;
+    }
+
+    public JButton getAtras() {
+        return atras;
+    }
+
+    public JTextField getContraseña() {
+        return contraseña;
+    }
+
+    public JTextField getCorreo() {
+        return correo;
+    }
+
+    public JTextField getNombre() {
+        return nombre;
+    }
+
+    public JButton getRegistrate() {
+        return registrate;
+    }
+    
+    
+    
+    
     
 
     public crear_cuenta (){   
@@ -30,16 +58,16 @@ public abstract class crear_cuenta extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        buton1 = new javax.swing.JButton();
+        registrate = new javax.swing.JButton();
         check1 = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        nombre = new javax.swing.JTextField();
+        apellido = new javax.swing.JTextField();
+        correo = new javax.swing.JTextField();
+        contraseña = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         atras = new javax.swing.JButton();
 
@@ -48,20 +76,20 @@ public abstract class crear_cuenta extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        buton1.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        buton1.setText("REGISTRATE");
-        buton1.addChangeListener(new javax.swing.event.ChangeListener() {
+        registrate.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        registrate.setText("REGISTRATE");
+        registrate.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                buton1StateChanged(evt);
+                registrateStateChanged(evt);
             }
         });
-        buton1.addActionListener(new java.awt.event.ActionListener() {
+        registrate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buton1ActionPerformed(evt);
+                registrateActionPerformed(evt);
             }
         });
-        jPanel1.add(buton1);
-        buton1.setBounds(200, 330, 140, 40);
+        jPanel1.add(registrate);
+        registrate.setBounds(200, 330, 140, 40);
 
         check1.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
         check1.setText("Acceptar terminos");
@@ -97,26 +125,26 @@ public abstract class crear_cuenta extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(70, 230, 120, 40);
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(210, 80, 250, 40);
+        nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jPanel1.add(nombre);
+        nombre.setBounds(210, 80, 250, 40);
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(210, 130, 250, 40);
+        apellido.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jPanel1.add(apellido);
+        apellido.setBounds(210, 130, 250, 40);
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        correo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        correo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                correoActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(210, 180, 250, 40);
+        jPanel1.add(correo);
+        correo.setBounds(210, 180, 250, 40);
 
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jPanel1.add(jTextField4);
-        jTextField4.setBounds(210, 230, 250, 40);
+        contraseña.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jPanel1.add(contraseña);
+        contraseña.setBounds(210, 230, 250, 40);
 
         jLabel5.setFont(new java.awt.Font("Lucida Fax", 1, 20)); // NOI18N
         jLabel5.setText("REGISTRATÉ");
@@ -155,11 +183,11 @@ public abstract class crear_cuenta extends javax.swing.JFrame {
 
     }//GEN-LAST:event_check1ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void correoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correoActionPerformed
 
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_correoActionPerformed
 
-    private void buton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buton1ActionPerformed
+    private void registrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrateActionPerformed
 
                  this.setVisible(false);
  selec_areatrab forma = new  selec_areatrab();
@@ -169,7 +197,7 @@ public abstract class crear_cuenta extends javax.swing.JFrame {
         
         
         
-    }//GEN-LAST:event_buton1ActionPerformed
+    }//GEN-LAST:event_registrateActionPerformed
 
     private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
                // TODO add your handling code here:
@@ -185,26 +213,26 @@ public abstract class crear_cuenta extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_atrasKeyTyped
 
-    private void buton1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_buton1StateChanged
+    private void registrateStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_registrateStateChanged
         // TODO add your handling code here:
       
-    }//GEN-LAST:event_buton1StateChanged
+    }//GEN-LAST:event_registrateStateChanged
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField apellido;
     private javax.swing.JButton atras;
-    private javax.swing.JButton buton1;
     private javax.swing.JCheckBox check1;
+    private javax.swing.JTextField contraseña;
+    private javax.swing.JTextField correo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField nombre;
+    private javax.swing.JButton registrate;
     // End of variables declaration//GEN-END:variables
 }

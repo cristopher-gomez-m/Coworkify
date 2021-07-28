@@ -3,6 +3,7 @@ package coworkify.Usuario.Modelo;
 
 
 import java.util.List;
+import javax.swing.JOptionPane;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -24,12 +25,13 @@ public class UsuarioDB {
             }
         miSesssion.getTransaction().commit();
         
-        miSesssion.close();
+        
         if(miUsuario==null) return flag=false;
         else return flag=true;
         }catch(Exception e){
             e.toString();
         }finally{
+            miSesssion.close();
             miFactory.close();
         }
             return flag;
@@ -37,5 +39,20 @@ public class UsuarioDB {
         
     }
 
-    
+    public void guardarUsuario(Usuario usuario){
+        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).buildSessionFactory();
+        Session miSesssion= miFactory.openSession();
+        
+        try{
+            miSesssion.beginTransaction();
+            miSesssion.save(usuario);
+            miSesssion.getTransaction().commit();
+            JOptionPane.showMessageDialog(null, "Cuenta creada correctamente");
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            miSesssion.close();
+            miFactory.close();
+        }
+    }
 }
