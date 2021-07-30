@@ -13,7 +13,6 @@ import javax.persistence.Table;
 public class Usuario {
     
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="correo")
     private String correo;
     

@@ -18,7 +18,7 @@ import javax.swing.event.ChangeListener;
  *
  * @author Dani Beva
  */
-public abstract class crear_cuenta extends javax.swing.JFrame {
+public class crear_cuenta extends javax.swing.JFrame {
 
     public JTextField getApellido() {
         return apellido;
@@ -189,11 +189,11 @@ public abstract class crear_cuenta extends javax.swing.JFrame {
 
     private void registrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrateActionPerformed
 
-                 this.setVisible(false);
+                /* this.setVisible(false);
  selec_areatrab forma = new  selec_areatrab();
                  forma.setVisible(true);
                  forma.setBounds(375,210, 365, 310);
-                 forma.setTitle("ÁREA DE TRABAJO");
+                 forma.setTitle("ÁREA DE TRABAJO");*/
         
         
         

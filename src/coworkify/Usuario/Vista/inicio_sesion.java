@@ -26,6 +26,10 @@ public class inicio_sesion extends javax.swing.JFrame {
         return ingresarcuenta;
     }
 
+    public JButton getCrearCuenta() {
+        return crearCuenta;
+    }
+
     
     
     
@@ -48,7 +52,7 @@ public class inicio_sesion extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         iniciar_sesion = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        crearCuenta = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         ingresarcuenta = new javax.swing.JTextField();
@@ -73,15 +77,15 @@ public class inicio_sesion extends javax.swing.JFrame {
         jPanel1.add(iniciar_sesion);
         iniciar_sesion.setBounds(170, 270, 170, 40);
 
-        jButton2.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
-        jButton2.setText("CREAR UNA CUENTA");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        crearCuenta.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
+        crearCuenta.setText("CREAR UNA CUENTA");
+        crearCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                crearCuentaActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(160, 360, 190, 30);
+        jPanel1.add(crearCuenta);
+        crearCuenta.setBounds(160, 360, 190, 30);
 
         jLabel2.setFont(new java.awt.Font("Algerian", 3, 36)); // NOI18N
         jLabel2.setText("COWORKIFY");
@@ -124,17 +128,17 @@ public class inicio_sesion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void crearCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearCuentaActionPerformed
      //    TODO add your handling code here:
-                    this.setVisible(false);
+                   /* this.setVisible(false);
               crear_cuenta forma = new crear_cuenta(){};
               forma.setVisible(true);
                  forma.setBounds(375,210, 561, 465);
-                 forma.setTitle("CREAR CUENTA");
+                 forma.setTitle("CREAR CUENTA");*/
                  
  
   
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_crearCuentaActionPerformed
 
     private void ingresarcuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarcuentaActionPerformed
         // TODO add your handling code here:
@@ -146,11 +150,11 @@ public class inicio_sesion extends javax.swing.JFrame {
 
     private void iniciar_sesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciar_sesionActionPerformed
         // TODO add your handling code here:
-                 this.setVisible(false);
+                 /*this.setVisible(false);
   selec_areatrab forma = new  selec_areatrab();
                  forma.setVisible(true);
                  forma.setBounds(375,210, 365, 310);
-                 forma.setTitle("ÁREA DE TRABAJO");
+                 forma.setTitle("ÁREA DE TRABAJO");*/
     }//GEN-LAST:event_iniciar_sesionActionPerformed
 
     /**
@@ -158,10 +162,10 @@ public class inicio_sesion extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton crearCuenta;
     private javax.swing.JTextField ingresarcontraseña;
     private javax.swing.JTextField ingresarcuenta;
     private javax.swing.JButton iniciar_sesion;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

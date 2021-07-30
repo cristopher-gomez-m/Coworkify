@@ -6,9 +6,11 @@
 package coworkify.Usuario.Controlador;
 
 import coworkify.Usuario.Modelo.*;
+import coworkify.Usuario.Vista.crear_cuenta;
 import coworkify.Usuario.Vista.inicio_sesion;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 /**
  *
  * @author cristopheralexander
@@ -16,15 +18,32 @@ import java.awt.event.ActionListener;
 public class UsuarioLogin {
     private UsuarioDB usuarioDB;
     private inicio_sesion login;
-
-
+    private UsuarioCrearCuenta crearCuenta;
     public UsuarioLogin(UsuarioDB usuarioDB, inicio_sesion login) {
         this.usuarioDB = usuarioDB;
         this.login = login;
-        login.getIniciar_sesion().addActionListener(comprobar);
+        this.login.getIniciar_sesion().addActionListener(comprobar);
+        this.login.getCrearCuenta().addActionListener(botonCrearCuenta);
+        run();
     }
     
+      
     
+    public void run(){
+           login.setVisible(true);
+            login.setBounds(375,210, 561, 465);
+            login.setTitle("CREAR CUENTA");
+       }
+ 
+  
+    ActionListener botonCrearCuenta= new ActionListener(){
+        @Override
+        public void actionPerformed(ActionEvent e) {
+              login.setVisible(false);
+              crearCuenta= new UsuarioCrearCuenta(usuarioDB, new crear_cuenta());
+        }
+        
+    };
     
     
     
@@ -38,7 +57,7 @@ public class UsuarioLogin {
             
         }
         else{
-            
+            JOptionPane.showMessageDialog(null, "Esta mal el usuario o la contraseña");
         }
             }
         };
