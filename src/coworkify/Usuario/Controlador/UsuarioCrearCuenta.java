@@ -3,7 +3,6 @@ package coworkify.Usuario.Controlador;
 
 import coworkify.Usuario.Modelo.*;
 import coworkify.Usuario.Vista.crear_cuenta;
-import coworkify.Usuario.Vista.selec_areatrab;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;

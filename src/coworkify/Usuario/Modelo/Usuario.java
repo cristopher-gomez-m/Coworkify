@@ -1,16 +1,29 @@
 
 package coworkify.Usuario.Modelo;
 
+import coworkify.AreaTrabajo.Modelo.AreaTrabajo;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="usuario")
 public class Usuario {
+    
+    
+    
+    public void agregarArea(AreaTrabajo area){
+        areasTrabajo.add(area);
+        
+        area.setUsuario(this);
+    }
     
     @Id
     @Column(name="correo")
@@ -24,6 +37,9 @@ public class Usuario {
     
     @Column(name="apellido")
     private String apellido;
+    
+    @OneToMany(mappedBy="usuario",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    private List<AreaTrabajo> areasTrabajo= new ArrayList<>();
 
     public Usuario() {
     }

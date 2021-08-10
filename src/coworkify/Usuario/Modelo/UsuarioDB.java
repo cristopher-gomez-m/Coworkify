@@ -2,6 +2,7 @@
 package coworkify.Usuario.Modelo;
 
 
+import coworkify.AreaTrabajo.Modelo.AreaTrabajo;
 import java.util.List;
 import javax.swing.JOptionPane;
 import org.hibernate.Session;
@@ -13,7 +14,7 @@ public class UsuarioDB {
      private Boolean flag;
      private Boolean estado;
     public Boolean BuscarUsuario(String correo,String contraseña){
-        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).buildSessionFactory();
+        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         try{
         miSesssion.beginTransaction();
@@ -41,7 +42,7 @@ public class UsuarioDB {
 
     
         public Boolean comprobarUsuario(String correo){
-        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).buildSessionFactory();
+        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         try{
             miSesssion.beginTransaction();
@@ -58,7 +59,7 @@ public class UsuarioDB {
       } 
     
     public void guardarUsuario(Usuario usuario){
-        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).buildSessionFactory();
+        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         
         try{

@@ -5,9 +5,11 @@
  */
 package coworkify.Usuario.Controlador;
 
-import coworkify.Usuario.Modelo.*;
+import coworkify.AreaTrabajo.Controlador.UsuarioSeleccionarArea;
+import coworkify.Usuario.Modelo.UsuarioDB;
 import coworkify.Usuario.Vista.crear_cuenta;
 import coworkify.Usuario.Vista.inicio_sesion;
+import coworkify.AreaTrabajo.Vista.selec_areatrab;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -19,6 +21,7 @@ public class UsuarioLogin {
     private UsuarioDB usuarioDB;
     private inicio_sesion login;
     private UsuarioCrearCuenta crearCuenta;
+    private UsuarioSeleccionarArea selecArea;
     public UsuarioLogin(UsuarioDB usuarioDB, inicio_sesion login) {
         this.usuarioDB = usuarioDB;
         this.login = login;
@@ -54,7 +57,8 @@ public class UsuarioLogin {
         String contraseña= login.getIngresarcontraseña().getText();
         Boolean estado=usuarioDB.BuscarUsuario(correo, contraseña);
         if(estado){
-            
+            login.setVisible(false);
+            selecArea= new UsuarioSeleccionarArea(new selec_areatrab());
         }
         else{
             JOptionPane.showMessageDialog(null, "Esta mal el usuario o la contraseña");
