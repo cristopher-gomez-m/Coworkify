@@ -21,7 +21,7 @@ public class AreaTrabajoDB {
         try{
             miSesssion.beginTransaction();
             List <AreaTrabajo> miArea= miSesssion.createQuery("from AreaTrabajo areaTrabajo where areaTrabajo.id_area_trabajo ='"+idArea +"'").getResultList();
-            if(miArea==null) estado=false;
+            if(miArea.size()==0) estado=false;
             else estado=true;
         }catch(Exception e){
             e.printStackTrace();

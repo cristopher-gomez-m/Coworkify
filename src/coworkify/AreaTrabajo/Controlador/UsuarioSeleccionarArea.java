@@ -4,6 +4,7 @@
 package coworkify.AreaTrabajo.Controlador;
 
 import coworkify.AreaTrabajo.Modelo.AreaTrabajoDB;
+import coworkify.AreaTrabajo.Vista.crear_areatrab;
 import coworkify.AreaTrabajo.Vista.ingre_areatrab;
 import coworkify.AreaTrabajo.Vista.selec_areatrab;
 import java.awt.event.ActionEvent;
@@ -39,7 +40,7 @@ public class UsuarioSeleccionarArea {
         ActionListener crear= new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent e) {
-            crearArea= new CrearArea();
+            crearArea= new CrearArea(new crear_areatrab(), new AreaTrabajoDB());
         }
 
         

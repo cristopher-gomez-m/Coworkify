@@ -3,21 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Vista/crear_areatrab.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Controlador/UsuarioSeleccionarArea.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Controlador/UsuarioCrearCuenta.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Modelo/UsuarioDB.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Modelo/Usuario.java</file>
             <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Coworkify.java</file>
             <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Controlador/CrearArea.java</file>
             <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Modelo/AreaTrabajoDB.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Vista/selec_areatrab.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Controlador/IngresarArea.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Controlador/UsuarioSeleccionarArea.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Controlador/UsuarioCrearCuenta.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Vista/ingre_areatrab.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Factura/Modelo/Factura.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Modelo/Usuario.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Controlador/UsuarioLogin.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Vista/menu_princtrab.java</file>
             <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Modelo/AreaTrabajo.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/Usuario/Vista/menu_princ.java</file>
-            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Controlador/MenuPrincipal.java</file>
+            <file>file:/C:/Users/cristopheralexander/Documents/NetBeansProjects/Coworkify/src/coworkify/AreaTrabajo/Controlador/IngresarArea.java</file>
         </group>
     </open-files>
 </project-private>

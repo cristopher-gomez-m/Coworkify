@@ -43,10 +43,10 @@ public class UsuarioCrearCuenta {
         else{
                 System.out.println(correo);
             Boolean estado=usuarioDB.comprobarUsuario(correo);
-            if(estado ==false){
+            if(estado){
                 JOptionPane.showMessageDialog(null,"ese correo ya existe");
             }
-            else if(estado){
+            else{
             Usuario usuario = new Usuario(correo,contraseña,nombre,apellido);
             usuarioDB.guardarUsuario(usuario);
         }

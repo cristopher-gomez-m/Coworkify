@@ -47,8 +47,8 @@ public class UsuarioDB {
         try{
             miSesssion.beginTransaction();
             List <Usuario> miUsuario= miSesssion.createQuery("from Usuario usuario1 where usuario1.correo ='"+correo +"'").getResultList();
-            if(miUsuario==null) estado=false;
-            else estado=true;
+            if(miUsuario.size()==0) return estado=false;
+            else return estado=true;
         }catch(Exception e){
             e.printStackTrace();
         }finally{
