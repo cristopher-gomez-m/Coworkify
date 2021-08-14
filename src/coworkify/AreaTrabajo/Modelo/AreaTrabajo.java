@@ -14,6 +14,10 @@ import javax.persistence.Table;
 @Table(name="area_de_trabajo")
 public class AreaTrabajo {
 
+    public AreaTrabajo(){
+        
+    }
+    
     public AreaTrabajo(String id_area_trabajo, String nombre_del_espacio) {
         this.id_area_trabajo = id_area_trabajo;
         this.nombre_del_espacio = nombre_del_espacio;

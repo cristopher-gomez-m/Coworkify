@@ -23,6 +23,13 @@ public class CrearArea {
         this.crearArea = crearArea;
         this.area = area;
         this.crearArea.getRegistrar().addActionListener(botonCrear);
+        run();
+    }
+    
+        public void run(){
+        crearArea.setVisible(true);
+        crearArea.setBounds(375,210, 550, 375);
+        crearArea.setTitle("INGRESAR AL ÁREA DE TRABAJO");
     }
     
         ActionListener botonCrear= new ActionListener(){
@@ -40,6 +47,7 @@ public class CrearArea {
                 }
                 else{
                     AreaTrabajo areaTrabajo= new AreaTrabajo(idArea,nombre);
+                    area.guardarArea(areaTrabajo);
                 }
             }
         }

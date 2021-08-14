@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,6 +21,7 @@ public class Usuario {
     
     
     public void agregarArea(AreaTrabajo area){
+        if(areasTrabajo==null) areasTrabajo=new ArrayList<>();
         areasTrabajo.add(area);
         
         area.setUsuario(this);
@@ -38,11 +40,17 @@ public class Usuario {
     @Column(name="apellido")
     private String apellido;
     
-    @OneToMany(mappedBy="usuario",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
-    private List<AreaTrabajo> areasTrabajo= new ArrayList<>();
+    @OneToMany(fetch=FetchType.EAGER,mappedBy="usuario",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    private List<AreaTrabajo> areasTrabajo;
 
     public Usuario() {
     }
+
+    public List<AreaTrabajo> getAreasTrabajo() {
+        return areasTrabajo;
+    }
+
+    
 
     public Usuario(String correo, String contraseña, String nombre, String apellido) {
         this.correo = correo;

@@ -12,7 +12,12 @@ public class MenuPrincipal {
     public MenuPrincipal(menu_princtrab menu, AreaTrabajoDB areaTrabajo) {
         this.menu = menu;
         this.areaTrabajo = areaTrabajo;
+        run();
     }
-    
+        public void run(){
+        menu.setVisible(true);
+        menu.setBounds(375,210, 550, 375);
+     
+    }
     
 }

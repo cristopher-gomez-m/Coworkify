@@ -14,9 +14,10 @@ public class UsuarioSeleccionarArea {
     private selec_areatrab selecArea;
     private CrearArea crearArea;
     private IngresarArea ingresarArea;
-
-    public UsuarioSeleccionarArea(selec_areatrab selecArea) {
+    private AreaTrabajoDB areaDB;
+    public UsuarioSeleccionarArea(selec_areatrab selecArea,AreaTrabajoDB areaDB) {
         this.selecArea = selecArea;
+        this.areaDB=areaDB;
         this.selecArea.getIngresarArea().addActionListener(ingresar);
         this.selecArea.getCrearArea().addActionListener(crear);
         run();
@@ -32,7 +33,8 @@ public class UsuarioSeleccionarArea {
         ActionListener ingresar= new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent e) {
-          ingresarArea= new IngresarArea(new ingre_areatrab(),new AreaTrabajoDB());
+          ingresarArea= new IngresarArea(new ingre_areatrab(),areaDB);
+          selecArea.setVisible(false);
         }
 };
         
@@ -40,7 +42,8 @@ public class UsuarioSeleccionarArea {
         ActionListener crear= new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent e) {
-            crearArea= new CrearArea(new crear_areatrab(), new AreaTrabajoDB());
+            crearArea= new CrearArea(new crear_areatrab(),areaDB);
+            selecArea.setVisible(false);
         }
 
         

@@ -24,7 +24,7 @@ public class IngresarArea {
     
     public void run(){
         ingresar.setVisible(true);
-        ingresar.setBounds(375,210, 550, 375);
+        ingresar.setBounds(500,500, 550, 500);
         ingresar.setTitle("INGRESAR AL ÁREA DE TRABAJO");
     }
     
