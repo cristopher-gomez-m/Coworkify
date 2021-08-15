@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -42,6 +43,9 @@ public class Usuario {
     
     @OneToMany(fetch=FetchType.EAGER,mappedBy="usuario",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     private List<AreaTrabajo> areasTrabajo;
+    
+    @OneToOne(fetch=FetchType.EAGER,mappedBy="usuario",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    private miembroTrabajo miembroTrabajo;
 
     public Usuario() {
     }
@@ -94,6 +98,10 @@ public class Usuario {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public miembroTrabajo getMiembroTrabajo() {
+        return miembroTrabajo;
     }
 
 

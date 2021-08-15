@@ -28,7 +28,7 @@ public class menu_princtrab extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        listaAreas = new javax.swing.JComboBox<>();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel21 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
@@ -36,9 +36,9 @@ public class menu_princtrab extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        miembroInactivos = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
+        miembroActivos = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -103,14 +103,14 @@ public class menu_princtrab extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 640, 50);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        listaAreas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        listaAreas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                listaAreasActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(640, 0, 140, 50);
+        getContentPane().add(listaAreas);
+        listaAreas.setBounds(640, 0, 140, 50);
 
         jPanel21.setLayout(null);
 
@@ -134,11 +134,11 @@ public class menu_princtrab extends javax.swing.JFrame {
         jPanel7.add(jLabel17);
         jLabel17.setBounds(130, 10, 100, 40);
 
-        jLabel18.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel7.add(jLabel18);
-        jLabel18.setBounds(160, 110, 90, 40);
+        miembroInactivos.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
+        miembroInactivos.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        miembroInactivos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(miembroInactivos);
+        miembroInactivos.setBounds(160, 110, 90, 40);
 
         jLabel20.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -146,11 +146,11 @@ public class menu_princtrab extends javax.swing.JFrame {
         jPanel7.add(jLabel20);
         jLabel20.setBounds(40, 60, 90, 40);
 
-        jLabel25.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel7.add(jLabel25);
-        jLabel25.setBounds(160, 60, 90, 40);
+        miembroActivos.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
+        miembroActivos.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        miembroActivos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel7.add(miembroActivos);
+        miembroActivos.setBounds(160, 60, 90, 40);
 
         jPanel22.add(jPanel7);
         jPanel7.setBounds(30, 20, 340, 170);
@@ -492,7 +492,7 @@ public class menu_princtrab extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void listaAreasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaAreasActionPerformed
         // TODO add your handling code here:
 
         //Cogemos el texto del campo de texto
@@ -503,7 +503,7 @@ public class menu_princtrab extends javax.swing.JFrame {
 
         //Reiniciamos el campo de texto
         //    recibenombre.setText("");
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_listaAreasActionPerformed
 
     private void jScrollBar1AdjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {//GEN-FIRST:event_jScrollBar1AdjustmentValueChanged
         // TODO add your handling code here:
@@ -546,7 +546,6 @@ public class menu_princtrab extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JComboBox<String> jComboBox1;
     public static javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -556,14 +555,12 @@ public class menu_princtrab extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
@@ -611,5 +608,8 @@ public class menu_princtrab extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    public static javax.swing.JComboBox<String> listaAreas;
+    private javax.swing.JLabel miembroActivos;
+    private javax.swing.JLabel miembroInactivos;
     // End of variables declaration//GEN-END:variables
 }

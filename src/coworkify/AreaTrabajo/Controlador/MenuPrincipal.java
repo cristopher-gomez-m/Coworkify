@@ -16,7 +16,8 @@ public class MenuPrincipal {
     }
         public void run(){
         menu.setVisible(true);
-        menu.setBounds(375,210, 550, 375);
+        menu.setBounds(375,155,800,500);
+        menu.setTitle("COWORKIFY");
      
     }
     

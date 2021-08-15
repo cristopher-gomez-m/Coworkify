@@ -25,6 +25,7 @@ public class AreaTrabajoDB {
         SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Usuario.class)
                 .addAnnotatedClass(AreaTrabajo.class)
+                .addAnnotatedClass(trabaja.class)
                 .buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         try{
@@ -43,7 +44,11 @@ public class AreaTrabajoDB {
             
             
     public List<AreaTrabajo> buscarAreas(String correo){
-         SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).buildSessionFactory();
+         SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml")
+                 .addAnnotatedClass(Usuario.class)
+                 .addAnnotatedClass(AreaTrabajo.class)
+                 .addAnnotatedClass(trabaja.class)
+                 .buildSessionFactory();
             Session miSesssion= miFactory.openSession();      
             try{
             miSesssion.beginTransaction();
@@ -61,7 +66,11 @@ public class AreaTrabajoDB {
 
     public void guardarArea(AreaTrabajo areaTrabajo){
                
-                SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).buildSessionFactory();
+                SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml")
+                        .addAnnotatedClass(Usuario.class)
+                        .addAnnotatedClass(AreaTrabajo.class)
+                        .addAnnotatedClass(trabaja.class)
+                        .buildSessionFactory();
                 Session miSesssion= miFactory.openSession();
         
                 try{

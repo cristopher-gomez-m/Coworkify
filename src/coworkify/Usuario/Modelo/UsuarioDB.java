@@ -22,7 +22,7 @@ public class UsuarioDB {
      
      private List<Usuario> miUsuario;
         public List<Usuario> BuscarUsuario(String correo,String contraseña){
-        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).buildSessionFactory();
+        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).addAnnotatedClass(miembroTrabajo.class).buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         try{
         miSesssion.beginTransaction();
@@ -46,7 +46,7 @@ public class UsuarioDB {
 
     
         public Boolean comprobarUsuario(String correo){
-        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).buildSessionFactory();
+        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).addAnnotatedClass(miembroTrabajo.class).buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         try{
             miSesssion.beginTransaction();
@@ -63,7 +63,7 @@ public class UsuarioDB {
       } 
     
     public void guardarUsuario(Usuario usuario){
-        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).buildSessionFactory();
+        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).addAnnotatedClass(miembroTrabajo.class).buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         
         try{
