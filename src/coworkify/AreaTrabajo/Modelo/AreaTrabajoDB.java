@@ -2,6 +2,7 @@
 package coworkify.AreaTrabajo.Modelo;
 
 import coworkify.Usuario.Modelo.Usuario;
+import coworkify.Usuario.Modelo.miembroTrabajo;
 import java.util.List;
 import javax.swing.JOptionPane;
 import org.hibernate.Session;
@@ -26,6 +27,7 @@ public class AreaTrabajoDB {
                 .addAnnotatedClass(Usuario.class)
                 .addAnnotatedClass(AreaTrabajo.class)
                 .addAnnotatedClass(trabaja.class)
+                .addAnnotatedClass(miembroTrabajo.class)
                 .buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         try{
@@ -48,6 +50,7 @@ public class AreaTrabajoDB {
                  .addAnnotatedClass(Usuario.class)
                  .addAnnotatedClass(AreaTrabajo.class)
                  .addAnnotatedClass(trabaja.class)
+                 .addAnnotatedClass(miembroTrabajo.class)
                  .buildSessionFactory();
             Session miSesssion= miFactory.openSession();      
             try{
@@ -70,6 +73,7 @@ public class AreaTrabajoDB {
                         .addAnnotatedClass(Usuario.class)
                         .addAnnotatedClass(AreaTrabajo.class)
                         .addAnnotatedClass(trabaja.class)
+                        .addAnnotatedClass(miembroTrabajo.class)
                         .buildSessionFactory();
                 Session miSesssion= miFactory.openSession();
         

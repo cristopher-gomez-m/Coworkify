@@ -30,8 +30,7 @@ public class miembroTrabajo {
     @Column(name="Nombre")
     private String nombre;
     
-    @Column(name="Plan")
-    private String plan;
+
     
     @Id
     @Column(name="No_trabajador")
@@ -42,17 +41,33 @@ public class miembroTrabajo {
     @JoinColumn(name="usuario_correo")
     private Usuario usuario;
     
-    @OneToMany(fetch=FetchType.EAGER,mappedBy="miembro_de_trabajo",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    @OneToMany(fetch=FetchType.EAGER,mappedBy="miembroTrabajo",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     private List<trabaja> trabajos;
     
     public miembroTrabajo(){
        
     }
 
-    public miembroTrabajo(String nombre, String plan, int no_trabajador) {
+    public miembroTrabajo(String nombre,int no_trabajador) {
         this.nombre = nombre;
-        this.plan = plan;
+       
         this.no_trabajador = no_trabajador;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getNo_trabajador() {
+        return no_trabajador;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public List<trabaja> getTrabajos() {
+        return trabajos;
     }
     
     

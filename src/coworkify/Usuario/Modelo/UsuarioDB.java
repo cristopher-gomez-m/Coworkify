@@ -4,6 +4,7 @@ package coworkify.Usuario.Modelo;
 
 
 import coworkify.AreaTrabajo.Modelo.AreaTrabajo;
+import coworkify.AreaTrabajo.Modelo.trabaja;
 import java.util.List;
 import javax.swing.JOptionPane;
 import org.hibernate.Session;
@@ -22,7 +23,12 @@ public class UsuarioDB {
      
      private List<Usuario> miUsuario;
         public List<Usuario> BuscarUsuario(String correo,String contraseña){
-        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).addAnnotatedClass(miembroTrabajo.class).buildSessionFactory();
+        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Usuario.class)
+                .addAnnotatedClass(AreaTrabajo.class)
+                .addAnnotatedClass(miembroTrabajo.class)
+                .addAnnotatedClass(trabaja.class)
+                .buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         try{
         miSesssion.beginTransaction();
@@ -46,7 +52,12 @@ public class UsuarioDB {
 
     
         public Boolean comprobarUsuario(String correo){
-        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).addAnnotatedClass(miembroTrabajo.class).buildSessionFactory();
+        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Usuario.class)
+                .addAnnotatedClass(AreaTrabajo.class)
+                .addAnnotatedClass(miembroTrabajo.class)
+                .addAnnotatedClass(trabaja.class)
+                .buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         try{
             miSesssion.beginTransaction();
@@ -63,7 +74,12 @@ public class UsuarioDB {
       } 
     
     public void guardarUsuario(Usuario usuario){
-        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Usuario.class).addAnnotatedClass(AreaTrabajo.class).addAnnotatedClass(miembroTrabajo.class).buildSessionFactory();
+        SessionFactory miFactory= new Configuration().configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Usuario.class)
+                .addAnnotatedClass(AreaTrabajo.class)
+                .addAnnotatedClass(miembroTrabajo.class)
+                .addAnnotatedClass(trabaja.class)
+                .buildSessionFactory();
         Session miSesssion= miFactory.openSession();
         
         try{

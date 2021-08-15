@@ -45,7 +45,7 @@ public class AreaTrabajo {
     @JoinColumn(name="usuario_correo")
     private Usuario usuario;
 
-    @OneToMany(fetch=FetchType.EAGER,mappedBy="area_de_trabajo",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    @OneToMany(fetch=FetchType.EAGER,mappedBy="areaTrabajo",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     private List<trabaja> trabajos;
 
     public String getId_area_trabajo() {

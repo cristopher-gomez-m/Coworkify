@@ -4,6 +4,7 @@ package coworkify.AreaTrabajo.Modelo;
 import coworkify.Usuario.Modelo.miembroTrabajo;
 import java.io.Serializable;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
@@ -25,12 +26,16 @@ public class trabaja implements Serializable {
     @JoinColumn(name="miembro_de_trabajo_No_trabajador")
     private miembroTrabajo miembroTrabajo;
     
+    @Column(name="Plan")
+    private String plan;
+    
     public trabaja(){
         
     }
 
-    public trabaja(AreaTrabajo areaTrabajo, miembroTrabajo miembroTrabajo) {
+    public trabaja(AreaTrabajo areaTrabajo, miembroTrabajo miembroTrabajo,String plan) {
         this.areaTrabajo = areaTrabajo;
+        this.plan=plan;
         this.miembroTrabajo = miembroTrabajo;
     }
     
@@ -52,6 +57,18 @@ public class trabaja implements Serializable {
 
     public void setMiembroTrabajo(miembroTrabajo miembroTrabajo) {
         this.miembroTrabajo = miembroTrabajo;
+    }
+
+    public AreaTrabajo getAreaTrabajo() {
+        return areaTrabajo;
+    }
+
+    public miembroTrabajo getMiembroTrabajo() {
+        return miembroTrabajo;
+    }
+
+    public String getPlan() {
+        return plan;
     }
     
     
