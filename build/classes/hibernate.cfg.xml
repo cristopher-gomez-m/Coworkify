@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Dialecto Hibernate -->
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
+        <!-- Conexión a la base de datos -->
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+        <property name="hibernate.connection.username">system</property>
+        <property name="hibernate.connection.password">2024230alex</property>
+        
+
+        <!-- Muestra por consola el código SQL usado por hibernate al trabajar con la BD -->
+        <property name="show_sql">true</property>
+
+
+
+
+
+    </session-factory>
+</hibernate-configuration>
